@@ -34,13 +34,18 @@ impl LayoutMinimal {
         ])
         .areas(area);
 
-        let block_h = match state.get_pane() {
-            Pane::TrackList => get_block_height(state.get_legal_songs().len(), area),
-            _ => match state.get_sidebar_view() {
-                LibraryView::Albums => get_block_height(state.albums.len(), area),
-                LibraryView::Playlists => get_block_height(state.playlists.len(), area),
+        let legal_songs_len = state.get_legal_songs().len();
+
+        let block_h = (match state.get_mode() == Mode::Search {
+            true => get_block_height(legal_songs_len, area),
+            false => match state.get_pane() {
+                Pane::TrackList => get_block_height(legal_songs_len, area),
+                _ => match state.get_sidebar_view() {
+                    LibraryView::Albums => get_block_height(state.albums.len(), area),
+                    LibraryView::Playlists => get_block_height(state.playlists.len(), area),
+                },
             },
-        } as u16;
+        } + search_height as usize) as u16;
 
         let [_upper_pad, upper_block, _, widget_spacing, _bottom_pad] = Layout::vertical([
             Constraint::Percentage(20),
