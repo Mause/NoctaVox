@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## CURRENT DEVELOPMENT CHANGES
+
+ - Fixed visual bugs when searching in mimimal mode
+ - Fixed inconsistent multi-select behavior
+
 ## Version 0.2.5
 
 MINIMAL MODE BETA

@@ -1,4 +1,4 @@
-<h1 style="text-align: center"> NoctaVox [v0.2.4]
+<h1 style="text-align: center"> NoctaVox [v0.2.5]
 
 [![Built With Ratatui](https://ratatui.rs/built-with-ratatui/badge.svg)](https://ratatui.rs/)
 </h1>
@@ -16,7 +16,8 @@ written in Rust.
 - Live library reloading
 - Custom themeing with hot reload
 - Vim-like key-bindings
-- Waveform, oscilloscope, and spectrum visualizations
+- Minimal view mode
+- Optional waveform, oscilloscope, and spectrum visualizations
 - Playlist management
 
 ## Installation
@@ -37,15 +38,17 @@ vox
 ## Quick Start
 
 On first launch, you'll be prompted to set root directories for your music
-library. Access this menu anytime with the `` ` `` / `~` key.
+library. Access this menu anytime with the `` ` `` or `~` key.
 
-**Navigation:** `hjkl` or arrow keys  
+**Navigation (Scrolling):** `j` `k` or vertical arrow keys  
+**Navigation (Panes):** `h` `l` or horizontal arrow keys  
 **Playback:** `Space` to toggle playback, `Enter` to play  
 **Seeking:** `n` +5 secs, `p` -5 secs  
 **Search:** `/`  
 **Add to queue**: `q`  
-**Reload library:** `F5` or `Ctrl+u`  
-**Reload theme:** `F6`
+**Reload library:** `F5` or `Ctrl`+`u`  
+**Reload theme:** `F6`  
+**Toggle minimal mode:** `m`
 
 See the complete [keymap documentation](./docs/keymaps.md) for much more
 
@@ -68,7 +71,7 @@ chmod +x ./install-themes.sh
 ./install-themes.ps1
 ``` 
 
-## Notes
+## About
 
 Supported formats: `mp3`, `m4a`, `wav`, `flac`, `ogg`, `opus` \
 Container formats are **not** currently supported: (e.g. `webm`, `mkv`, etc.)
@@ -98,6 +101,7 @@ projects!
 
 ## Roadmap 
 
+- Implement cleaner visual design / simpler design for mimimal mode
 - Additional user config options (framerate, backend selection)
 - Expanded format testing
 - Playlist import/export functionality

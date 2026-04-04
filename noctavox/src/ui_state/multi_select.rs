@@ -17,7 +17,7 @@ impl UiState {
 
         if count == 0 {
             match self.display_state.multi_select.contains(&song_idx) {
-                true => self.display_state.multi_select.swap_remove(&song_idx),
+                true => self.display_state.multi_select.shift_remove(&song_idx),
                 false => self.display_state.multi_select.insert(song_idx),
             };
         } else {
