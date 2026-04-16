@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Version 0.2.6
+## [0.2.6] - 2026-04-15
 
 Voxio moved to its own repository: 
     https://github.com/Jaxx497/Voxio
@@ -17,7 +17,7 @@ Bug fixes and enhancements:
 Other:
  - Bumped ratatui-textarea to version 0.9
 
-## Version 0.2.5
+## [0.2.5]
 
 MINIMAL MODE BETA
 
@@ -32,7 +32,7 @@ MINIMAL MODE BETA
 
  - Fixed bug where numbers could not be entered into text fields
 
-## Version 0.2.4
+## [0.2.4]
 
 NEW THEME SPECIFICATION* v0.8
 
@@ -49,7 +49,7 @@ Non-bar widgets responsive sizing depending on window height
 
 Added theme installation scripts
 
-## Version 0.2.3
+## [0.2.3]
 
 Added spectrum-analyzer widget
 
@@ -66,7 +66,7 @@ New maps:
 
 Switched `Alt`+`1`, `Alt`+`2`, `Alt`+`3` to be `Ctrl`+`1`, `Ctrl`+`2`, `Ctrl`+`3`
 
-## Version 0.2.2
+## [0.2.2]
 Licensing added
 
 Voxio is now available on crates.io \
@@ -85,7 +85,7 @@ Consider using the standard `Ctrl`+`A`, `Ctrl`+`T`, `Ctrl`+`Q` maps instead
 Minor visual bugs have been resolved, including extreme strobing from progress
 widgets
 
-## Version 0.2.1
+## [0.2.1]
 Voxio is now the default backend.
 
 Crossbeam has been integrated. All event driven

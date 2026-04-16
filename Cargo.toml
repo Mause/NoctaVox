@@ -8,6 +8,7 @@ license = "MIT"
 repository = "https://github.com/Jaxx497/NoctaVox/"
 keywords = ["tui", "music", "audio", "player", "terminal"]
 categories = ["multimedia::audio", "command-line-utilities"]
+readme = "README.md"
 
 [dependencies]
 anyhow = "1.0.102"
@@ -50,7 +51,6 @@ lto = "thin"
 codegen-units = 4
 opt-level = 3
 
-# The profile that 'dist' will build with
 [profile.dist]
 inherits = "release"
 lto = "thin"
