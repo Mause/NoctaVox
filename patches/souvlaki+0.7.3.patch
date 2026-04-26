@@ -1,0 +1,17 @@
+diff --git a/src/platform/mod.rs b/src/platform/mod.rs
+index 1800e7e..62e63b2 100644
+--- a/src/platform/mod.rs
++++ b/src/platform/mod.rs
+@@ -8,9 +8,9 @@ mod platform;
+ #[path = "macos/mod.rs"]
+ mod platform;
+ 
+-#[cfg(all(unix, not(target_os = "macos")))]
+-#[path = "mpris/mod.rs"]
+-mod platform;
++// #[cfg(all(unix, not(target_os = "macos")))]
++// #[path = "mpris/mod.rs"]
++// mod platform;
+ 
+ #[cfg(all(
+     not(target_os = "linux"),

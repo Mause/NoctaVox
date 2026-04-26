@@ -10,6 +10,9 @@ keywords = ["tui", "music", "audio", "player", "terminal"]
 categories = ["multimedia::audio", "command-line-utilities"]
 readme = "README.md"
 
+[package.metadata.patch]
+crates = ["souvlaki"]
+
 [dependencies]
 anyhow = "1.0.102"
 crossbeam = { version = "0.8.4", default-features = false, features = ["crossbeam-channel", "crossbeam-queue"] }
@@ -45,6 +48,9 @@ windows-sys = { version = "0.61", features = [
 [[bin]]
 name = "vox"
 path = "src/main.rs"
+
+[patch.crates-io]
+souvlaki = { path = "./target/patch/souvlaki" }
 
 [profile.release]
 lto = "thin"
